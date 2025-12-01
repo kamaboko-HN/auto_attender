@@ -241,8 +241,6 @@ class AutoAttender:
         schedule.every().day.at("14:15").do(self.check_class_exist)
         schedule.every().day.at("15:55").do(self.check_class_exist)
         schedule.every().day.at("17:35").do(self.check_class_exist)
-        
-        schedule.every().day.at("19:50").do(self.attend_class)
         while self.running:
             schedule.run_pending()
             time.sleep(1)
